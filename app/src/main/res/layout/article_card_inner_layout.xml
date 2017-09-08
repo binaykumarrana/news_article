@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/llItemView"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvArticleTitle"
+        fontPath="fonts/raleway_semi_bold.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_4"
+        android:layout_marginStart="@dimen/margin_4"
+        android:layout_marginTop="@dimen/margin_8"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/actions_textsize_20"
+        tools:ignore="MissingPrefix"/>
+
+    <TextView
+        android:id="@+id/tvArticlePublisher"
+        fontPath="fonts/raleway_semi_bold.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_4"
+        android:layout_marginStart="@dimen/margin_4"
+        android:layout_marginTop="@dimen/margin_8"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/semi_black"
+        android:textSize="@dimen/actions_textsize_17"
+        tools:ignore="MissingPrefix"/>
+
+    <TextView
+        android:id="@+id/tvArticleHost"
+        fontPath="fonts/roboto_regular.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_4"
+        android:layout_marginStart="@dimen/margin_4"
+        android:layout_marginTop="@dimen/margin_8"
+        android:autoLink="all"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="@dimen/actions_textsize_14"
+        tools:ignore="MissingPrefix"/>
+
+    <TextView
+        android:id="@+id/tvArticleUrl"
+        fontPath="fonts/roboto_regular.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_4"
+        android:layout_marginStart="@dimen/margin_4"
+        android:layout_marginTop="@dimen/margin_8"
+        android:autoLink="all"
+        android:ellipsize="end"
+        android:textSize="@dimen/actions_textsize_14"
+        tools:ignore="MissingPrefix"/>
+
+    <TextView
+        android:id="@+id/tvArticleTime"
+        fontPath="fonts/roboto_regular.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_4"
+        android:layout_marginStart="@dimen/margin_4"
+        android:layout_marginTop="@dimen/margin_8"
+        android:autoLink="all"
+        android:ellipsize="end"
+        android:textSize="@dimen/actions_textsize_14"
+        android:visibility="gone"
+        tools:ignore="MissingPrefix"/>
+
+    <ImageButton
+        android:id="@+id/ibFav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:padding="@dimen/margin_8"
+        android:layout_margin="@dimen/fab_margin"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:src="@drawable/ic_favorite"
+        />
+</LinearLayout>
