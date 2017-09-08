@@ -8,18 +8,28 @@ import android.view.MenuItem;
 
 import binay.inshortapp.R;
 import binay.inshortapp.fragment.ArticleCardsFragment;
+import binay.inshortapp.interfaces.FilterListener;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class MainActivity extends AppCompatActivity {
+
+    //Listener to apply filter
+    FilterListener mFilterListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //Intialize listener
+        mFilterListener = (FilterListener) this;
+
+        //Attaching fragment
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.container, ArticleCardsFragment.newInstance()).commit();
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -29,14 +39,17 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_filter_publisher) {
+            if (mFilterListener != null)
+                mFilterListener.onApplyFilter(1);
             return true;
+        } else if (id == R.id.action_filter_category) {
+            if (mFilterListener != null)
+                mFilterListener.onApplyFilter(2);
+            return true;
+
         }
 
         return super.onOptionsItemSelected(item);
@@ -46,4 +59,6 @@ public class MainActivity extends AppCompatActivity {
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
+
+
 }

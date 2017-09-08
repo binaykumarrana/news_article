@@ -22,6 +22,7 @@ import java.util.List;
 
 import binay.inshortapp.R;
 import binay.inshortapp.card.ArticleCard;
+import binay.inshortapp.interfaces.FilterListener;
 import binay.inshortapp.model.Article;
 import binay.inshortapp.util.Constant;
 import it.gmariotti.cardslib.library.internal.Card;
@@ -32,7 +33,7 @@ import it.gmariotti.cardslib.library.recyclerview.view.CardRecyclerView;
  * Created by Binay on 08/09/17.
  */
 
-public class ArticleCardsFragment extends BaseFragment {
+public class ArticleCardsFragment extends BaseFragment implements FilterListener {
 
     private CardRecyclerView cardRecyclerView;
     private CardArrayRecyclerViewAdapter cardArrayRecyclerViewAdapter;
@@ -117,4 +118,8 @@ public class ArticleCardsFragment extends BaseFragment {
     }
 
 
+    @Override
+    public void onApplyFilter(int position) {
+
+    }
 }
