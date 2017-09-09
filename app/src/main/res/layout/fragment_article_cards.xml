@@ -1,22 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:card="http://schemas.android.com/apk/res-auto"
-              android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
-
-    <ProgressBar
-        android:id="@+id/pbArticlesLoading"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:visibility="gone"
-        />
+              android:layout_height="match_parent"
+              android:orientation="vertical">
 
     <it.gmariotti.cardslib.library.recyclerview.view.CardRecyclerView
+        android:id="@+id/crvArticles"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        card:list_card_layout_resourceID="@layout/native_recyclerview_card_layout"
-        android:id="@+id/crvArticles"/>
+        card:list_card_layout_resourceID="@layout/native_recyclerview_card_layout"/>
 
 </LinearLayout>

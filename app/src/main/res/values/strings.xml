@@ -3,4 +3,14 @@
     <string name="action_settings">Settings</string>
     <string name="action_publisher">Publisher</string>
     <string name="action_category">Category</string>
+    <string name="action_sort_old_new">Old to New</string>
+    <string name="action_sort_new_old">New to Old</string>
+    <string name="action_offline">Show Offline</string>
+    <string name="action_filter">Filter</string>
+    <string name="action_sort">Sort</string>
+    <string name="business">Business</string>
+    <string name="action_sc">Science and Technology</string>
+    <string name="action_health">Health</string>
+    <string name="action_entertainment">Entertainment</string>
+    <string name="action_online">Show Online</string>
 </resources>

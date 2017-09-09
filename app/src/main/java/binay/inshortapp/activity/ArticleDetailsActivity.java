@@ -1,6 +1,7 @@
 package binay.inshortapp.activity;
 
 import android.annotation.SuppressLint;
+import android.annotation.TargetApi;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.os.Handler;
@@ -8,11 +9,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebResourceError;
+import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Toast;
 
 import binay.inshortapp.R;
 
+/**
+ * The type Article details activity.
+ */
 public class ArticleDetailsActivity extends AppCompatActivity {
     private ProgressDialog progressDialog;
 
@@ -56,6 +63,21 @@ public class ArticleDetailsActivity extends AppCompatActivity {
             view.loadUrl(url);
 
             return true;
+        }
+
+        @Override
+        public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
+            if (errorCode == 404 || errorCode == 500) {
+                Toast.makeText(ArticleDetailsActivity.this, "There seems problem with article URL", Toast.LENGTH_LONG).show();
+            }
+
+        }
+
+        @TargetApi(android.os.Build.VERSION_CODES.M)
+        @Override
+        public void onReceivedError(WebView view, WebResourceRequest req, WebResourceError rerr) {
+            // Redirect to deprecated method, so you can use it in all SDK versions
+            onReceivedError(view, rerr.getErrorCode(), rerr.getDescription().toString(), req.getUrl().toString());
         }
     }
 

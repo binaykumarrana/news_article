@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/llCategory"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/tvBusiness"
+        fontPath="fonts/raleway_semi_bold.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/margin_48"
+        android:paddingTop="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:text="@string/business"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/actions_textsize_20"
+        tools:ignore="MissingPrefix"/>
+
+    <TextView
+        android:id="@+id/tvScTech"
+        fontPath="fonts/raleway_semi_bold.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/margin_48"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:text="@string/action_sc"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/actions_textsize_20"
+        tools:ignore="MissingPrefix"/>
+
+
+    <TextView
+        android:id="@+id/tvEntertainment"
+        fontPath="fonts/raleway_semi_bold.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/margin_48"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:text="@string/action_entertainment"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/actions_textsize_20"
+        tools:ignore="MissingPrefix"/>
+
+
+    <TextView
+        android:id="@+id/tvHealth"
+        fontPath="fonts/raleway_semi_bold.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/margin_48"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:text="@string/action_health"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/actions_textsize_20"
+        tools:ignore="MissingPrefix"/>
+</LinearLayout>

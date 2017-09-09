@@ -3,7 +3,6 @@ package binay.inshortapp.card;
 import android.content.Context;
 import android.content.Intent;
 import android.text.method.LinkMovementMethod;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
@@ -78,6 +77,7 @@ public class ArticleCard extends Card {
         cardItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                article.save();
                 mContext.startActivity(new Intent(mContext, ArticleDetailsActivity.class).putExtra("URL", article.URL).putExtra("HOST", article.PUBLISHER));
             }
         });
@@ -92,21 +92,20 @@ public class ArticleCard extends Card {
                     List<Article> articleList = new RushSearch()
                             .whereEqual("ID", article.ID)
                             .find(Article.class);
-                    articleList.get(0).delete(new RushCallback() {
-                        @Override
-                        public void complete() {
-                            article.isFavArticle = false;
-                            favButton.setImageResource(R.drawable.ic_favorite);
-                            Log.d("BIUFHFU", "delete");
-                        }
-                    });
+                    if (articleList.size() > 0)
+                        articleList.get(0).delete(new RushCallback() {
+                            @Override
+                            public void complete() {
+                                article.isFavArticle = false;
+                                favButton.setImageResource(R.drawable.ic_favorite);
+                            }
+                        });
                 } else {
                     article.save(new RushCallback() {
                         @Override
                         public void complete() {
                             article.isFavArticle = true;
                             favButton.setImageResource(R.drawable.ic_favorite_red_200_24dp);
-                            Log.d("BIUFHFU", "save");
                         }
                     });
 

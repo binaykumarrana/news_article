@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Single List Item Design -->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          android:id="@+id/tvPublisherName"
+          fontPath="fonts/raleway_semi_bold.ttf"
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+          android:padding="@dimen/margin_8"
+          android:textColor="@android:color/black"
+          android:textSize="@dimen/actions_textsize_17"
+          tools:ignore="MissingPrefix">
+</TextView>

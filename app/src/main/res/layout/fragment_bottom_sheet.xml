@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/bottomSheetLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                app:behavior_hideable="false"
+                app:behavior_peekHeight="100dp"
+                app:layout_behavior="@string/bottom_sheet_behavior">
+
+    <include
+        android:id="@+id/llCategory"
+        layout="@layout/bottom_sheet_content_category"
+        android:visibility="invisible"/>
+
+    <include
+        android:id="@+id/llPublisher"
+        layout="@layout/bottom_sheet_content_publisher"
+        android:visibility="invisible"/>
+</RelativeLayout>

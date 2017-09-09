@@ -2,13 +2,53 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
       xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/action_filter_publisher"
+        android:id="@+id/action_filter"
+        android:enabled="true"
+        android:title="@string/action_filter"
+        android:titleCondensed="Filter"
+        android:visible="true">
+        <menu>
+            <item
+                android:id="@+id/action_filter_publisher"
+                android:orderInCategory="100"
+                android:title="@string/action_publisher"
+                app:showAsAction="never"/>
+            <item
+                android:id="@+id/action_filter_category"
+                android:orderInCategory="100"
+                android:title="@string/action_category"
+                app:showAsAction="never"/>
+        </menu>
+
+    </item>
+    <item
+        android:id="@+id/action_sort"
+        android:enabled="true"
+        android:title="@string/action_sort"
+        android:titleCondensed="Sort"
+        android:visible="true">
+        <menu>
+            <item
+                android:id="@+id/action_sort_old_new"
+                android:orderInCategory="100"
+                android:title="@string/action_sort_old_new"
+                app:showAsAction="never"/>
+            <item
+                android:id="@+id/action_sort_new_old"
+                android:orderInCategory="100"
+                android:title="@string/action_sort_new_old"
+                app:showAsAction="never"/>
+        </menu>
+
+    </item>
+    <item
+        android:id="@+id/action_offline"
         android:orderInCategory="100"
-        android:title="@string/action_publisher"
+        android:title="@string/action_offline"
         app:showAsAction="never"/>
     <item
-        android:id="@+id/action_filter_category"
+        android:id="@+id/action_online"
         android:orderInCategory="100"
-        android:title="@string/action_category"
+        android:title="@string/action_online"
         app:showAsAction="never"/>
 </menu>
