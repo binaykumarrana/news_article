@@ -22,7 +22,7 @@ public class NetworkUtil {
     }
 
     public static void showNoInternetAlertDialog(final Activity activity) {
-        android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(activity, R.style.MyAlertDialogStyle);
+        androidx.appcompat.app.AlertDialog.Builder builder = new androidx.appcompat.app.AlertDialog.Builder(activity, R.style.MyAlertDialogStyle);
 
         builder.setTitle("No internet connection");
         builder.setMessage("There seems to be no internet\nconnection. Check your\nconnection and try again.");
@@ -44,7 +44,7 @@ public class NetworkUtil {
             }
         });
 
-        final android.support.v7.app.AlertDialog dialog;
+        final androidx.appcompat.app.AlertDialog dialog;
 
         dialog = builder.create();
         InshortApplication.getInstance().setNoInternetDialogVisibility(true);

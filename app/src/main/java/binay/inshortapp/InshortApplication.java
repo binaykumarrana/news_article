@@ -13,7 +13,7 @@ import co.uk.rushorm.core.RushCore;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 
 /**
- * Created by rajkiran on 08/09/17.
+ * Created by Binay on 08/09/17.
  */
 
 public class InshortApplication extends Application {
